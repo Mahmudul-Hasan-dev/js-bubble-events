@@ -1,7 +1,21 @@
 document.getElementById('item-2').addEventListener('click', function (event) {
     console.log('item2 clicked');
-    //to stop bubble we have to use stop propagation
+    //to stop same lebel bubble
+    event.stopImmediatePropagation();
+    //to stop other level bubble we have to use stop propagation
     event.stopPropagation();
+})
+document.getElementById('item-2').addEventListener('click', function (event) {
+    console.log('item2 second clicked');
+})
+document.getElementById('item-2').addEventListener('click', function (event) {
+    console.log('item2 third clicked');
+})
+document.getElementById('item-2').addEventListener('click', function (event) {
+    console.log('item2 fourth clicked');
+})
+document.getElementById('item-2').addEventListener('click', function (event) {
+    console.log('item2 fifth clicked');
 })
 document.getElementById('ul-list').addEventListener('click', function () {
     console.log('ul-list clicked')
